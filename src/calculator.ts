@@ -45,6 +45,6 @@ export function calculateTTK(weapon: Weapon, bullet: Bullet, armor: Armor, dista
     bulletName: bullet.name,
     armorName: armor.name,
     distance: distance,
-    ttk: Math.max(bulletsToKill -1, 0)/ rps
+    ttk: Math.max(bulletsToKill -1, 0)/ rps + (distance / weapon.speed)
   }
 }

@@ -8,7 +8,7 @@ const armors = [Armors.class5Heavy, Armors.class6Heavy]
 for (const weapon of weapons) {
   for (const bullet of bullets) {
     for (const armor of armors) {
-      const ttk = calculateTTK(weapon, bullet, armor, 10 /* temp unused distance */)
+      const ttk = calculateTTK(weapon, bullet, armor, 30)
       console.log(JSON.stringify(ttk))
     }
   }
