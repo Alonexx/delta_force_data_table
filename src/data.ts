@@ -1,4 +1,4 @@
-import { Armor, Bullet, Weapon } from "./types";
+import { Armor, Body, Bullet, Weapon } from "./types";
 
 export class Weapons {
   static readonly K437: Weapon = {
@@ -8,6 +8,14 @@ export class Weapons {
     speed: 575,
     damage: 34,
     armorDamage: 35,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
   static readonly K416: Weapon = {
     name: "K416",
@@ -15,7 +23,15 @@ export class Weapons {
     range: 27,
     speed: 575,
     damage: 31,
-    armorDamage: 35
+    armorDamage: 35,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
   static readonly KC17: Weapon = {
     name: "KC17",
@@ -23,7 +39,15 @@ export class Weapons {
     range: 55,
     speed: 575,
     damage: 30,
-    armorDamage: 48
+    armorDamage: 48,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
   static readonly ASH12: Weapon = {
     name: "ASH-12",
@@ -31,7 +55,15 @@ export class Weapons {
     range: 55,
     speed: 340,
     damage: 56,
-    armorDamage: 55
+    armorDamage: 55,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.6,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.45,
+      [Body.ARM]: 0.45,
+      [Body.LEG]: 0.45
+    }
   }
   static readonly PKM: Weapon = {
     name: "PKM",
@@ -39,7 +71,15 @@ export class Weapons {
     range: 52,
     speed: 893,
     damage: 45,
-    armorDamage: 42
+    armorDamage: 42,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
   static readonly M14: Weapon = {
     name: "M14",
@@ -47,7 +87,15 @@ export class Weapons {
     range: 40,
     speed: 575,
     damage: 39,
-    armorDamage: 41
+    armorDamage: 41,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
   static readonly ASVAL: Weapon = {
     name: "ASVAL",
@@ -55,7 +103,15 @@ export class Weapons {
     range: 35,
     speed: 468,
     damage: 29,
-    armorDamage: 48
+    armorDamage: 48,
+    damageRatioOfBody: {
+      [Body.HEAD]: 1.9,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
   }
 }
 
@@ -77,21 +133,25 @@ export class Armors {
   static readonly class5Heavy: Armor = {
     name: "重型突击背心",
     value: 125,
-    armorClass: 5
+    armorClass: 5,
+    bodyProtection: [Body.CHEST, Body.STOMACH, Body.SHOULDER]
   }
   static readonly class5Medium: Armor = {
     name: "FS复合防弹衣",
     value: 105,
-    armorClass: 5
+    armorClass: 5,
+    bodyProtection: [Body.CHEST, Body.STOMACH]
   }
   static readonly class5Light: Armor = {
     name: "精英防弹背心",
     value: 95,
     armorClass: 5,
+    bodyProtection: [Body.CHEST, Body.STOMACH]
   }
   static readonly class6Heavy: Armor = {
     name: "泰坦防弹装甲",
     value: 150,
     armorClass: 6,
+    bodyProtection: [Body.CHEST, Body.STOMACH, Body.SHOULDER]
   }
 }

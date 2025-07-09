@@ -8,6 +8,7 @@ export interface Weapon extends Named {
   speed: number,
   damage: number,
   armorDamage: number,
+  damageRatioOfBody: Record<Body, number>
 }
 
 export type ArmorClass = 1 | 2 | 3 | 4 | 5 | 6
@@ -15,6 +16,7 @@ export type ArmorClass = 1 | 2 | 3 | 4 | 5 | 6
 export interface Armor extends Named {
   value: number,
   armorClass: ArmorClass
+  bodyProtection: Body[]
 }
 
 export type SixElementArray = [number, number, number, number, number, number]
@@ -22,4 +24,8 @@ export type SixElementArray = [number, number, number, number, number, number]
 export interface Bullet extends Named {
   armorDamageRatio: SixElementArray
   damageRatio: SixElementArray
+}
+
+export enum Body {
+  HEAD, CHEST, STOMACH, SHOULDER, ARM, LEG
 }
