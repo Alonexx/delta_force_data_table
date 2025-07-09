@@ -17,6 +17,14 @@ export class Weapons {
     damage: 31,
     armorDamage: 35
   }
+  static readonly KC17: Weapon = {
+    name: "KC17",
+    rpm: 740,
+    range: 55,
+    speed: 575,
+    damage: 30,
+    armorDamage: 48
+  }
   static readonly PKM: Weapon = {
     name: "PKM",
     rpm: 669,
