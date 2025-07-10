@@ -154,4 +154,22 @@ export class Armors {
     armorClass: 6,
     bodyProtection: [Body.CHEST, Body.STOMACH, Body.SHOULDER]
   }
+  static readonly class5HeavyHelmet: Armor = {
+    name: "GN 重型头盔",
+    value: 50,
+    armorClass: 5,
+    bodyProtection: [Body.HEAD],
+  }
+  static readonly class5MediumHelmet: Armor = {
+    name: "H09 防暴头盔",
+    value: 45,
+    armorClass: 5,
+    bodyProtection: [Body.HEAD],
+  }
+  static readonly class5LightHelmet: Armor = {
+    name: "DICH-1战术头盔头盔",
+    value: 40,
+    armorClass: 5,
+    bodyProtection: [Body.HEAD],
+  }
 }
