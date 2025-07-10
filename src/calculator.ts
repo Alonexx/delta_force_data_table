@@ -1,13 +1,4 @@
-import { Armors } from "./data";
 import { Armor, Body, Bullet, Weapon } from "./types";
-
-export interface TTKDiscription {
-  weaponName: string,
-  bulletName: string,
-  armorName: string,
-  distance: number,
-  ttk: number
-}
 
 function attack(weapon: Weapon, bullet: Bullet, armor: Armor, helmet: Armor, body: Body, healthRemaining: number, armorRemaining: number, helmetRemaining: number): [number, number, number] {
 
@@ -81,21 +72,6 @@ export function calculateBTK(weapon: Weapon, bullet: Bullet, armor: Armor, helme
     helmetRemaining = newHelmetRemaining
   }
   return bulletsToKill
-}
-
-export function calculateTTK(weapon: Weapon, bullet: Bullet, armor: Armor, distance: number): TTKDiscription {
-
-  const bulletsToKill = calculateBTK(weapon, bullet, armor, Armors.class5LightHelmet, Body.CHEST, distance)
-  
-  // 每秒子弹数
-  const rps = weapon.rpm / 60
-  return {
-    weaponName: weapon.name,
-    bulletName: bullet.name,
-    armorName: armor.name,
-    distance: distance,
-    ttk: Math.max(bulletsToKill -1, 0)/ rps + (distance / weapon.speed)
-  }
 }
 
 const probability = {

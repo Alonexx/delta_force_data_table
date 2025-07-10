@@ -1,4 +1,4 @@
-import { calculateBTK, calculateBTKWithProbability, calculateTTK } from "./calculator"
+import { calculateBTK, calculateBTKWithProbability } from "./calculator"
 import { Armors, Bullets, Weapons } from "./data"
 import { Body } from "./types"
 
