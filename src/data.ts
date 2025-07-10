@@ -146,6 +146,18 @@ export class Bullets {
 }
 
 export class Armors {
+  static readonly class4Heavy: Armor = {
+    name: "MK-2 战术背心",
+    value: 110,
+    armorClass: 4,
+    bodyProtection: [Body.CHEST, Body.STOMACH]
+  }
+  static readonly class4LightHelmet: Armor = {
+    name: "DICH 训练头盔",
+    value: 35,
+    armorClass: 4,
+    bodyProtection: [Body.HEAD]
+  }
   static readonly class5Heavy: Armor = {
     name: "重型突击背心",
     value: 125,
@@ -164,11 +176,23 @@ export class Armors {
     armorClass: 5,
     bodyProtection: [Body.CHEST, Body.STOMACH]
   }
+  static readonly class6Light: Armor = {
+    name: "特里克MAS2.0装甲",
+    value: 125,
+    armorClass: 6,
+    bodyProtection: [Body.CHEST, Body.STOMACH, Body.SHOULDER]
+  }
   static readonly class6Heavy: Armor = {
     name: "泰坦防弹装甲",
     value: 150,
     armorClass: 6,
     bodyProtection: [Body.CHEST, Body.STOMACH, Body.SHOULDER]
+  }
+  static readonly class6LightHelmet: Armor = {
+    name: "DICH-9重型头盔",
+    value: 50,
+    armorClass: 6,
+    bodyProtection: [Body.HEAD]
   }
   static readonly class5HeavyHelmet: Armor = {
     name: "GN 重型头盔",
@@ -183,9 +207,15 @@ export class Armors {
     bodyProtection: [Body.HEAD],
   }
   static readonly class5LightHelmet: Armor = {
-    name: "DICH-1战术头盔头盔",
+    name: "DICH-1战术头盔",
     value: 40,
     armorClass: 5,
     bodyProtection: [Body.HEAD],
+  }
+  static readonly none: Armor = {
+    name: 'None',
+    value: 0,
+    armorClass: 1,
+  bodyProtection: []
   }
 }
