@@ -79,7 +79,8 @@ export class Weapons {
       [Body.SHOULDER]: 0.4,
       [Body.ARM]: 0.4,
       [Body.LEG]: 0.4
-    }
+    },
+    fireDelay: 0.05
   }
   static readonly M14: Weapon = {
     name: "M14",

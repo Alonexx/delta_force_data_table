@@ -1,4 +1,4 @@
-import { calculateBTK, calculateBTKWithProbability } from "./calculator"
+import { btk2ttk, calculateBTK, calculateBTKWithProbability } from "./calculator"
 import { Armors, Bullets, Weapons } from "./data"
 import { Armor, Body, Bullet, Weapon } from "./types"
 
@@ -33,7 +33,7 @@ for (const weapon of weapons) {
           armor: armor,
           helmet: helmet,
           btk: btk,
-          ttk: (Math.max(0, btk - 1) / weapon.rpm * 60)
+          ttk: btk2ttk(weapon, btk)
         })
     }
   }
@@ -64,7 +64,7 @@ for (const weapon of weapons) {
           armor: armor,
           helmet: helmet,
           btk: btk,
-          ttk: (Math.max(0, btk - 1) / weapon.rpm * 60)
+          ttk: btk2ttk(weapon, btk)
         })
       }
     }

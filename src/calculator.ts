@@ -96,3 +96,7 @@ export function calculateBTKWithProbability(weapon: Weapon, bullet: Bullet, armo
   }
   return btk
 }
+
+export function btk2ttk(weapon: Weapon, btk: number) {
+  return (Math.max(0, btk - 1) / weapon.rpm * 60) + (weapon.fireDelay ?? 0)
+}

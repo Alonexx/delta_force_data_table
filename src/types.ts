@@ -8,7 +8,8 @@ export interface Weapon extends Named {
   speed: number,
   damage: number,
   armorDamage: number,
-  damageRatioOfBody: Record<Body, number>
+  damageRatioOfBody: Record<Body, number>,
+  fireDelay?: number
 }
 
 export type ArmorClass = 1 | 2 | 3 | 4 | 5 | 6
