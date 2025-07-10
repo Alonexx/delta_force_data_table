@@ -113,6 +113,22 @@ export class Weapons {
       [Body.LEG]: 0.4
     }
   }
+  static readonly TENGLONG: Weapon = {
+    name: "高速腾龙突击步枪",
+    rpm: 759,
+    range: 35,
+    speed: 815,
+    damage: 35,
+    armorDamage: 38,
+    damageRatioOfBody: {
+      [Body.HEAD]: 2.1,
+      [Body.CHEST]: 1.0,
+      [Body.STOMACH]: 0.9,
+      [Body.SHOULDER]: 0.4,
+      [Body.ARM]: 0.4,
+      [Body.LEG]: 0.4
+    }
+  }
 }
 
 
